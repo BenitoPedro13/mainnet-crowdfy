@@ -1,9 +1,9 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const vendingMachine = await ethers.deployContract('VendingMachine');
-  await vendingMachine.waitForDeployment();
-  console.log(`Cupcake vending machine deployed to ${vendingMachine?.target}`);
+  const CrowdFunding = await ethers.deployContract('CrowdFunding');
+  await CrowdFunding.waitForDeployment();
+  console.log(`CrowdFunding deployed to ${CrowdFunding?.target}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

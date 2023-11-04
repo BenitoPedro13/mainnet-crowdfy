@@ -11,7 +11,7 @@ const config: HardhatUserConfig = {
     arbitrumGoerli: {
       url: 'https://goerli-rollup.arbitrum.io/rpc',
       chainId: 421613,
-      // accounts: ['UZ5X99QSXB35FEXM9DNPY2H1RDD6SE65MY']
+      accounts: ['ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80']
     },
     arbitrumOne: {
       url: 'https://arb1.arbitrum.io/rpc',
