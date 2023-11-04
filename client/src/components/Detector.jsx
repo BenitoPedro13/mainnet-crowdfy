@@ -36,7 +36,7 @@ export const AutoConnect = () => {
         />
         }
         
-        <ConnectWallet/>
+        <ConnectWallet switchToActiveChain={true}/>
       </>
     )
   };
