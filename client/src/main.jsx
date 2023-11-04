@@ -10,7 +10,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <ThirdwebProvider activeChain="goerli" clientId="4dab696f96ddb65ccdca48c9507959ff">
+  <ThirdwebProvider activeChain="arbitrum-goerli" clientId="4dab696f96ddb65ccdca48c9507959ff">
     <Router>
       <StateContextProvider>
         <App />
