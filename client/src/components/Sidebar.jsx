@@ -67,6 +67,7 @@ const Sidebar = () => {
                     navigate(link.link);
                   }
                 }}
+                disabled={link.name in []}
               />
             ))}
           </div>
