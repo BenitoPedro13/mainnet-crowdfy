@@ -5,6 +5,7 @@ import { useStateContext } from '../context';
 import { CustomButton } from './';
 import { logo, menu, search, thirdweb } from '../assets';
 import { navlinks } from '../constants';
+import { Detector } from './Detector';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -32,6 +33,8 @@ const Navbar = () => {
             else connect()
           }}
         />
+
+        <Detector />
 
         <Link to="/profile">
           <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
