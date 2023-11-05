@@ -19,9 +19,9 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
       </div>
 
       <div className="flex flex-col p-4">
-        <div className="block">
+        <div className="flex flex-col gap-1">
           <h3 className="font-inter font-semibold text-[24px] text-[#101828] text-left leading-[26px] truncate">{title}</h3>
-          <p className="mt-[16px] font-jakarta font-normal text-[#475467] text-left leading-[18px] truncate">{description}</p>
+          <p className="font-jakarta font-normal text-[#475467] text-left leading-[18px] truncate">{description}</p>
         </div>
 
          
