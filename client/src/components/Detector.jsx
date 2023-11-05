@@ -24,8 +24,6 @@ export const AutoConnect = () => {
       }
     }, [address]); // This above block gets run every time "address" changes (e.g. when the user connects)
 
-    console.log(connectionStatus)
-
     return (
       <>
         {!isMismatched && 
