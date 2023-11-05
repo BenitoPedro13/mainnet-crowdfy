@@ -1,33 +1,61 @@
-import React from 'react'
+import React from "react";
 
-const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handleChange }) => {
+const FormField = ({
+  labelName,
+  placeholder,
+  inputType,
+  isTextArea,
+  value,
+  handleChange,
+  flexCol,
+}) => {
   return (
-    <label className="flex-1 flex flex-col">
+    <label
+      className={`flex-1 flex items-start ${
+        flexCol ? "flex-col" : ""
+      } gap-5 self-stretch border-b border-[#E4E4E6] pb-[22px]`}
+    >
       {labelName && (
-        <span className="font-jakarta font-semibold text-[16px] leading-[22px] text-[#344054] mb-[10px]">{labelName}</span>
+        <div className="flex w-full max-w-[250px] gap-[10px]">
+          <span className="font-jakarta font-semibold text-[16px] leading-[24px] text-[#344054]">
+            {labelName}
+          </span>
+        </div>
       )}
       {isTextArea ? (
-        <textarea 
-          required
-          value={value}
-          onChange={handleChange}
-          rows={10}
-          placeholder={placeholder}
-          className="py-[8px] sm:px-[12px] px-[12px] outline-none border-[1px] border-[#3a3a43] bg-transparent font-inter text-[#002251] text-[16px] placeholder:text-[#4b5264] rounded-[10px] sm:min-w-[300px] w-[300px]"
-        />
+        <div className="flex flex-col items-start gap-[6px] flex-1 self-stretch">
+          <div className="flex flex-1 items-start gap-2 self-stretch">
+            <div className="flex flex-1 flex-col items-start gap-[6px] self-stretch">
+              <textarea
+                required
+                value={value}
+                onChange={handleChange}
+                rows={10}
+                placeholder={placeholder}
+                className="flex flex-1 py-2 px-3 border border-[#CBD5E1] bg-white font-inter text-[#002251] text-[16px] placeholder:text-[#4b5264] rounded-[6px] sm:min-w-[300px] w-full"
+              />
+            </div>
+          </div>
+        </div>
       ) : (
-        <input 
-          required
-          value={value}
-          onChange={handleChange}
-          type={inputType}
-          step="0.1"
-          placeholder={placeholder}
-          className="py-[8px] sm:px-[12px] px-[12px] outline-none border-[1px] border-[#3a3a43] bg-transparent font-inter text-[#002251] text-[16px] placeholder:text-[#4b5264] rounded-[10px] sm:min-w-[300px]"
-        />
+        <div className="flex w-full flex-1 flex-col items-start gap-[6px]">
+          <div className="flex items-start gap-2 self-stretch">
+            <div className="flex flex-1 flex-col items-start gap-[6px]">
+              <input
+                required
+                value={value}
+                onChange={handleChange}
+                type={inputType}
+                step="0.1"
+                placeholder={placeholder}
+                className="flex py-2 px-3 self-stretch rounded-md border border-[#CBD5E1] bg-white font-inter text-base text-[#002251]"
+              ></input>
+            </div>
+          </div>
+        </div>
       )}
     </label>
-  )
-}
+  );
+};
 
-export default FormField
+export default FormField;

@@ -31,7 +31,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="flex w-[82px] flex-col justify-between items-start sticky h-[84vh] flex-shrink-0 self-stretch border-r border-[#DDDDDD]">
+      <div className="flex w-[82px] flex-col justify-between items-start sticky h-[100vh] flex-shrink-0 self-stretch border-r border-[#DDDDDD]">
         <div className="flex flex-col items-start gap-10 self-stretch pt-8">
           <div className="flex flex-col items-start self-stretch pr-5 pl-6">
             <Link to="/">
@@ -74,7 +74,7 @@ const Sidebar = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-start gap-6 self-stretch px-4 pb-6">
+        <div className="flex flex-col items-start gap-6 self-stretch px-4 pb-10">
           <div className="flex flex-col items-start gap-2 self-stretch">
             <Icon
               styles="bg-transparent"

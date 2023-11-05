@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { thirdweb } from '../assets';
 import { calculateBarPercentage, daysLeft } from '../utils';
@@ -6,9 +6,11 @@ import { calculateBarPercentage, daysLeft } from '../utils';
 const FundCard = ({ owner, title, description, target, deadline, amountCollected, image, handleClick }) => {
 
   const remainingDays = daysLeft(deadline);
+
+  const [width, setWidth] = useState((calculateBarPercentage(target, amountCollected) / 100) * 364)
   
   return (
-    <div className="sm:w-[398px] w-full rounded-[12px] bg-[#FFFFFF] cursor-pointer border-solid border shadow-md" onClick={handleClick}>
+    <div className="max-w-[398px] w-full rounded-[12px] bg-[#FFFFFF] cursor-pointer border-solid border shadow-md" onClick={handleClick}>
       <img src={image} alt="fund" className="w-full h-[175px] object-cover rounded-b-none rounded-t-xl"/>
 
       <div className="flex items-center gap-[10px] px-4 mt-[20px]">
@@ -21,12 +23,11 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
       <div className="flex flex-col p-4">
         <div className="flex flex-col gap-1">
           <h3 className="font-inter font-semibold text-[24px] text-[#101828] text-left leading-[26px] truncate">{title}</h3>
-          <p className="font-jakarta font-normal text-[#475467] text-left leading-[18px] truncate">{description}</p>
+          <p className="font-jakarta font-normal text-[#475467] text-left leading-[18px] line-clamp-2 text-ellipsis">{description}</p>
         </div>
 
-         
         <div className="relative w-full h-[5px] bg-[#ECFCCB] mt-4 rounded-[53px]">
-            <div className={`absolute h-full bg-[#84CC16] max-w-full rounded-[53px] w-[${calculateBarPercentage(target, amountCollected)}%]`}></div>
+            <div className={`h-full max-w-full ${!width ? 'w-0': `w-[${width}px]`} bg-[#84CC16] rounded-[53px]`}></div>
         </div>
         
 

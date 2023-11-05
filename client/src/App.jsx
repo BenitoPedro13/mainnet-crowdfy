@@ -11,7 +11,7 @@ const App = () => {
         <Sidebar />
       </div>
 
-      <div className="flex-1 max-sm:w-full sm:pr-5 p-[47px] pt-[26px]">
+      <div className="flex flex-col flex-1 max-sm:w-full p-[47px] pt-[26px] gap-7">
         <Navbar />
 
         <Routes>

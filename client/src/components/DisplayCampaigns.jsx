@@ -13,7 +13,7 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
   
   return (
     <div>
-      <h1 className="font-inter font-semibold text-[48px] text-[#0A0A0A] text-left">{title} ({campaigns.length})</h1>
+      <h1 className="font-inter font-semibold sm:text-[48px] text-[18px] leading-[48px] text-[#0A0A0A] tracking-[-0.576px]">{title} ({campaigns.length})</h1>
 
       <div className="flex flex-wrap mt-8 gap-[26px]">
         {isLoading && (
