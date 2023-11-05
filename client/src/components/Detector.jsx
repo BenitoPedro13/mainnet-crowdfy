@@ -37,9 +37,9 @@ export const AutoConnect = () => {
         
         {
         connectionStatus === "disconnected" ?
-          (<ConnectWallet switchToActiveChain={true} theme="light" className="!bg-[#84CC16] !text-white" />) 
+          (<ConnectWallet switchToActiveChain={true} theme="light" className="!bg-[#84CC16] !text-white h-[48px]" />) 
         :
-          (<ConnectWallet switchToActiveChain={true} theme="light" />)
+          (<ConnectWallet switchToActiveChain={true} theme="light" className="!h-[48px]" />)
         }
       </>
     )
