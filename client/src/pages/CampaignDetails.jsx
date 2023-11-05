@@ -131,7 +131,7 @@ const CampaignDetails = () => {
           </div>
         </div>
         <div className="flex flex-col items-start gap-[15px]">
-          <div className="flex flex-col items-start max-w-[400px] p-[18px] gap-[21px] self-stretch rounded-xl border border-[#EAECF0] shadow-sm">
+          <div className="flex flex-col items-start max-w-[400px] p-[18px] gap-[21px] self-stretch rounded-xl border border-[#EAECF0] bg-slate-50 shadow-sm">
             <h4 className="self-stretch text-[#475467] font-inter text-xl font-semibold tracking-[-0.7px]">
               🫰 Funds donated to this campaign
             </h4>
@@ -159,7 +159,7 @@ const CampaignDetails = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start max-w-[400px] p-[18px] gap-[21px] self-stretch rounded-xl border border-[#EAECF0] shadow-sm">
+          <div className="flex flex-col items-start max-w-[400px] p-[18px] gap-[21px] self-stretch rounded-xl border border-[#EAECF0] bg-slate-50 shadow-sm">
             <h4 className="self-stretch text-[#475467] font-inter text-xl font-semibold tracking-[-0.7px]">
               💪 Fund this campaign
             </h4>
